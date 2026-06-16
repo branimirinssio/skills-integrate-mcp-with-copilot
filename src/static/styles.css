@@ -22,10 +22,99 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  position: relative;
 }
 
 header h1 {
   margin-bottom: 10px;
+}
+
+/* User icon button in the top-right of the header */
+.user-icon-btn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  padding: 0;
+}
+
+.user-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.user-icon-btn.logged-in {
+  background: rgba(76, 175, 80, 0.5);
+  border-color: #a5d6a7;
+}
+
+/* Login modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+  color: #1a237e;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #bdbdbd;
+}
+
+#logged-in-panel p {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+#logged-in-panel button {
+  margin-right: 8px;
+}
+
+#logout-btn {
+  background-color: #c62828;
+}
+
+#logout-btn:hover {
+  background-color: #b71c1c;
 }
 
 main {
