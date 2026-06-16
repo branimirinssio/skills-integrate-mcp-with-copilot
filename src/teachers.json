@@ -1,0 +1,9 @@
+{
+  "teachers": [
+    {
+      "username": "teacher",
+      "password_hash": "368ca96a25b0af7e0d356a99499781e39afb7cb8e58e6cad778b41318d4448d0",
+      "salt": "c56e18c8f663b97a938270aa95f8f609"
+    }
+  ]
+}
